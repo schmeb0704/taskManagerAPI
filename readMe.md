@@ -16,11 +16,12 @@
 
 ### In this tutorial, _REST_ pattern is followed
 
-| **Method** | **Route** | **Description** |
-| GET | api/tasks | get all tasks |
-| POST | api/tasks | create task |
-| GET | api/tasks/:id | get task |
-| PUT/PATCH | api/tasks/:id | update task |
-| DELETE | api/tasks/:id | delete task |
+| **Method** | **Route**     | **Description** |
+| ---------- | ------------- | --------------- |
+| GET        | api/tasks     | get all tasks   |
+| POST       | api/tasks     | create task     |
+| GET        | api/tasks/:id | get task        |
+| PUT/PATCH  | api/tasks/:id | update task     |
+| DELETE     | api/tasks/:id | delete task     |
 
 **Note**: endpoints are consistent, thus making the API more user friendly, and friendly for the creator too!
