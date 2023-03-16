@@ -3,14 +3,18 @@ const express = require("express")
 const tasks = require("./routes/tasks")
 const cars = require("./routes/car")
 const app = express()
-const port = 3000
+const port = process.env.PORT || 3000 // chooses port from process.env, and if nothing's there, it will choose 3000
 const connectDB = require("./db/connect")
+const notFound = require("./middleware/not-found")
+const errorHandlerMiddleware = require("./middleware/error-handler")
 
 app.use(express.static("./public"))
 app.use(express.json())
 
 app.use("/api/v1/tasks", tasks)
 app.use("/api/v1/cars", cars)
+app.use(notFound)
+app.use(errorHandlerMiddleware)
 
 
 

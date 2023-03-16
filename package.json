@@ -4,7 +4,8 @@
   "description": "task manager api tutorial",
   "main": "app.js",
   "scripts": {
-    "start": "nodemon app.js"
+    "start": "nodemon app.js",
+    "diff-port": "$env:PORT=6000; nodemon app.js"
   },
   "repository": {
     "type": "git",
